@@ -51,7 +51,6 @@ const App = () => {
       exercises: 14
     }
   ]
-  console.log('not working')
   return (
     <div>
       <Header course = {course}/>
