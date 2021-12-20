@@ -22,7 +22,7 @@ const App = () => {
           <tr>bad {bad}</tr>
           <all>all {(good + neutral + bad)}</all>
           <tr>average {(good - bad)/(good + neutral + bad)}</tr>
-          <tr>positive {good / (good + neutral + bad)}</tr>
+          <tr>positive {(good * 100) / (good + neutral + bad)} %</tr>
         </tbody>
       </table>
 
