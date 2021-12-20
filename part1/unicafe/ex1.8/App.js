@@ -10,7 +10,7 @@ const Statistics = (props) => {
           <tr>bad {props.bad}</tr>
           <all>all {total}</all>
           <tr>average {(props.good - props.bad)/ total}</tr>
-          <tr>positive {props.good / total}</tr>
+          <tr>positive {(props.good * 100) / total} %</tr>
         </tbody>
       </table>
   )
