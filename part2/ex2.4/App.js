@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Course = (props) => {
-  console.log('hi')
   const course = props.course
   return (
     <div>
