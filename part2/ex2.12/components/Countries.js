@@ -9,6 +9,26 @@ const Countries = ({countries, filter}) => {
         return ('Too many matches, specify another filter')
     }
 
+    else if (countriesToShow.length === 1) {
+        console.log(countriesToShow)
+        const country = countriesToShow[0]
+        console.log(country)
+        const e = Object.entries(country.languages)
+        console.log(e[0])
+        return (
+            <div>
+                <h1>{country.name.common}</h1>
+                <p>capital {country.capital}</p>
+                <p>population {country.population}</p>
+                <h2>Spoken Languages</h2>
+                <ul>
+                    {Object.entries(country.languages).map((k, v) => <li key = {v}>{k[1]}</li>)}
+                </ul>
+                <img src={country.flag} alt="Country flag"></img>
+            </div>
+        )
+    }
+
     return (
         <ul>
             {countriesToShow.map(country => <li key = {country.name.common}>{country.name.common}</li>)}
