@@ -18,11 +18,13 @@ const App = () => {
       })
   }, [])
 
-  const removePerson = (id) => {
-    personService
-      .removeObj(id)
-    persons.map(p => console.log(p.id !== id))
-    setPersons(persons.filter(p => p.id !== id))
+  const removePerson = (id, name) => {
+    if (window.confirm(`Delete ${name}?`)) {
+      personService
+        .removeObj(id)
+      persons.map(p => console.log(p.id !== id))
+      setPersons(persons.filter(p => p.id !== id))
+    }
   }
 
   const addPerson = (event) => {
